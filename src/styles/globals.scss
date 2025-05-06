@@ -1,0 +1,149 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'assets.scss';
+@import 'custom.scss';
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rethink+Sans:ital@1&display=swap');
+
+:root {
+  //colors
+  --color-bg-primary: #151416;
+  --color-primary: #1f2128;
+  --color-gray-100: #f2f4f7;
+  --color-pink-700: #8758ff;
+  --color-pink-600: #7f56d9;
+  --color-pink-brand: #7364db;
+  --color-pink-500: #6941c6;
+  --color-gray-500: #e5e5ef;
+  --color-gray-400: #8b8b93;
+  --color-gray-300: #d0d5dd;
+  --color-gray-200: #969696;
+  --color-gray-600: #475467;
+  --color-gray-icon: #969696;
+  --color-gray-100: #7d7d7d;
+  --color-brown-400: #ec8c56;
+  --color-brown-600: #fc7272;
+  --color-blue-400: #0d99ff;
+  --color-neutral-primary: #313442;
+  --color-neutral-400: #2c2f39;
+
+  //paddings
+  --padding-xxs: 2px;
+  --padding-xs: 4px;
+  --padding-s: 8px;
+  --padding-sb: 12px;
+  --padding-base: 16px;
+  --padding-bl: 20px;
+  --padding-l: 24px;
+  --padding-lxl: 28px;
+  --padding-xl: 32px;
+  --padding-xxl: 64px;
+  --padding-none: 0px;
+
+  //spaces
+  --space-xxs: 2px;
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-base: 16px;
+  --space-bl: 20px;
+  --space-l: 24px;
+  --space-lxl: 28px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+  --space-none: 0px;
+
+  overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+
+  
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+  // .main-page {
+  //   background-color: var(--color-bg-primary);
+  //   height: calc(100vh - 60px);
+  //   padding-top: var(--padding-xl);
+  //   padding-bottom: var(--padding-xl);
+  //   padding-left: var(--padding-lxl);
+  //   padding-right: var(--padding-s);
+  // }
+  
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--color-pink-600);
+  color: white;
+  border: none !important;
+}
+
+.button-secondary {
+  background-color: var(--color-neutral-400);
+  border: solid 1px var(--color-pink-700);
+  color: white;
+}
+
+.button-card {
+  background-color: var(--color-neutral-400);
+  border: solid 1px var(--color-gray-600);
+  color: white;
+}
+
+p {
+  font-size: 12px;
+  color: white;
+}
+
+a {
+  transition: none !important;
+}
+
+span {
+  font-size: 14px;
+  color: white;
+}
+
+hr {
+  border-top: none !important;
+  border-bottom: solid 1px var(--color-gray-100) !important;
+  margin: inherit !important;
+}
+
+h1 {
+  font-size: 48px;
+  color: white !important;
+}
+h2 {
+  font-size: 24px;
+  color: white !important;
+}
+h3 {
+  font-size: 32px;
+  color: white !important;
+}
+h4 {
+  font-size: 20px;
+  color: white !important;
+}
+h5 {
+  font-size: 18px;
+  color: white !important;
+}
+h6 {
+  font-size: 16px;
+  color: white !important;
+}
+

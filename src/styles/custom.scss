@@ -1,0 +1,196 @@
+//customize notification
+.ant-notification-notice-icon {
+  line-height: 17px !important;
+}
+
+// customize auth-content
+.ant-dropdown-menu {
+  background-color: var(--color-primary);
+}
+.ant-dropdown-placement-bottomLeft {
+  // top: 60px !important;
+}
+.ant-dropdown-menu-item {
+  padding-left: var(--padding-l);
+  & a {
+    text-decoration: none;
+  }
+  span {
+    font-size: 16px;    
+    &:hover {
+      color: #8758ff;
+    }
+    &:active {
+      color: #8758ff;
+    }
+  }
+  &:hover {
+    background-color: var(--color-primary);
+  }
+  &:active {
+    background-color: var(--color-primary);
+  }
+}
+
+//customize modal
+.ant-modal-wrap {
+  backdrop-filter: blur(6px);
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+.ant-modal-content {
+  border-radius: 16px;
+  background-color: #1f2128;
+  box-shadow: 0 0 10px rgba(150, 150, 150, 0.1);
+  // height: 500px;
+}
+
+//customize antd-tabs
+.ant-tabs.ant-tabs-top.ant-tabs-card {
+  background-color: #292b33;
+  border-radius: 14px 14px 14px 14px;
+  border: solid 1px #313442;
+}
+.ant-tabs-nav-list {
+  width: 100%;
+  border-bottom: solid 1px #313442;
+}
+.ant-tabs-tab {
+  flex: 1;
+  border-radius: 14px 14px 0 0 !important;
+  border: none !important;
+  background-color: #292b33 !important;
+  display: flex;
+  justify-content: center;
+  padding: 4px !important;
+}
+.ant-tabs-tab-active {
+  background-color: var(--color-pink-brand) !important;
+}
+
+//customize dashboard-toggle-button
+.MuiSwitch-thumb {
+  background-color: var(--color-pink-brand) !important;
+}
+.MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+  background-color: #151416 !important;
+}
+.MuiSwitch-track {
+  background-color: #151416 !important;
+}
+
+//customize table-pagination
+.MuiDataGrid-selectedRowCount {
+  color: white;
+}
+.MuiSelect-select {
+  color: white !important;
+}
+.MuiTablePagination-input svg {
+  stroke: white;
+}
+.MuiIconButton-sizeMedium svg {
+  stroke: white;
+}
+
+//customize ant-slider
+.ant-tooltip-arrow {
+  display: none;
+}
+.ant-tooltip-inner {
+  background: none;
+  color: white !important;
+  position: relative;
+  top: var(--space-base);
+}
+div.ant-slider-handle {
+  border: none !important;
+  display: relative;
+}
+div.ant-slider-handle.ant-tooltip-open {
+  border: none;
+}
+.ant-slider-track {
+  background-color: #7364db;
+}
+.ant-slider:hover {
+  .ant-slider-track {
+    background-color: #7364db;
+  }
+}
+
+//customize phone-input component
+.react-tel-input {
+  border-radius: 16px !important;
+  border: solid 1px #313442 !important;
+  .form-control {
+    width: 100% !important;
+    border-radius: 16px !important;
+    // border: solid 1px #313442 !important;
+    border: none !important;
+    background: #313442 !important;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 300px #313442 inset !important;
+      background-color: #313442 !important;
+      border-color: #313442 !important;
+      border: none !important;
+      box-sizing: border-box !important;
+    }
+    &:-webkit-autofill {
+      &:focus {
+        -webkit-box-shadow: 0 0 0 300px #313442 inset !important;
+        background-color: #313442 !important;
+        border-color: #313442 !important;
+        border: none !important;
+      }
+    }
+  }
+  .flag-dropdown {
+    background-color: #313442 !important;
+    border-radius: 16px 0 0 16px !important;
+    border: none !important;
+    & :hover {
+      background-color: #313442 !important;
+      border-radius: 16px 0 0 16px !important;
+      border: none !important;
+    }
+    & :focus {
+      background-color: #313442 !important;
+      border-radius: 16px 0 0 16px !important;
+      border: solid 1px #313442 !important;
+    }
+  }
+  .flag-dropdown {
+    .open {
+      background-color: #313442 !important;
+      border-radius: 16px 0 0 16px !important;
+      border: solid 1px #313442 !important;
+    }
+    .country-list {
+      background-color: #313442 !important;
+      border: none !important;
+      border-radius: 0px !important;
+      .highlight {
+        background-color: #1f2128 !important;
+        border: none !important;
+        border-radius: 0px !important;
+      }
+    }
+  }
+}
+
+// Offcanvas price page
+
+div.offcanvas {
+  background-color: #1f2128 !important;
+}
+
+// Table selected text customized
+
+.MuiTablePagination-selectLabel {
+  margin-bottom: 0;
+}
+.MuiTablePagination-displayedRows {
+  margin-bottom: 0;
+}

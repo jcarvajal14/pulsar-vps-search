@@ -1,0 +1,54 @@
+.icon {
+}
+
+.alarm-icon {
+  width: 18px;
+  height: 19.5px;
+}
+.question-mrak-icon {
+  width: 24px;
+  height: 24px;
+}
+.user-avatar {
+  width: 48px;
+  height: 48px;
+}
+.city-icon {
+  position: absolute;
+  top: 0;
+  right: var(--space-s);
+  width: 100px;
+  height: 100px;
+}
+.pro-mask-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 90px;
+}
+.pro-mask-2-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+}
+.upgrade-image {
+    width: 110px;
+    aspect-ratio: 126/100;
+}
+.upgrade-mask-icon {
+    position: absolute;
+    top: 50%;
+    right: var(--space-xs);
+}
+.user-passage-icon {
+    position: absolute;
+    top: var(--space-base);
+    left: var(--space-l);
+}
+.moon-image {
+    width: 16px;
+    height: 16px;
+}
