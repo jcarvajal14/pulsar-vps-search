@@ -27,14 +27,27 @@ const SearchTextDiv = styled.input`
         outline: none;
     }
 `
-const SearchComponent = () => {
+interface SearchComponentProps {
+  searchTerm: string;
+  onSearchChange: (value: string) => void;
+}
+
+const SearchComponent: React.FC<SearchComponentProps> = ({ 
+  searchTerm, 
+  onSearchChange 
+}) => {
     return (
         <SearchDiv>
             <SearchIconDiv>
                 <SearchIcon />
             </SearchIconDiv>
-            <SearchTextDiv placeholder='Search'/>
+            <SearchTextDiv 
+                placeholder='Search IP addresses'
+                value={searchTerm}
+                onChange={(e) => onSearchChange(e.target.value)}
+            />
         </SearchDiv>
     )
 }
+
 export default SearchComponent;
