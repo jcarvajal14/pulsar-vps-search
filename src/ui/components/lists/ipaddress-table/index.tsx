@@ -13,11 +13,16 @@ interface Server {
   location: string;
   dateAllocated: string;
   status: StatusType;
-  assinedTo: {
+  assignedTo: {
     serverAddress: string;
     serverType: string;
   };
-  manage: string;
+  manage: boolean; // Change to boolean for manage cell
+}
+
+// Props interface for the component
+interface IpAddressesTableProps {
+  ipList: Server[];
 }
 
 const columnsMin: GridColDef<Server>[] = [
@@ -53,8 +58,8 @@ const columnsMin: GridColDef<Server>[] = [
     renderCell: (params: GridRenderCellParams<Server>) => {
       return (
         <ServerCell
-          serverAddress={params.value.serverAddress as string}
-          serverType={params.value.serverType as string}
+          serverAddress={params.value.serverAddress}
+          serverType={params.value.serverType}
         />
       );
     },
@@ -110,12 +115,12 @@ const rowsMin = [
   },
 ];
 
-const IpAddressesTable = () => {
+const IpAddressesTable = ({ ipList }: IpAddressesTableProps) => {
   return (
     <TrafficTableContainer>
       <div style={{ height: '100%', width: '100%' }}>
-        {/* @ts-ignore */}
-        <DataGrid rows={rowsMin} columns={columnsMin} />
+         {/* Use ipList for rows instead of static data */}
+        <DataGrid rows={ipList} columns={columnsMin} />
       </div>
     </TrafficTableContainer>
   );
