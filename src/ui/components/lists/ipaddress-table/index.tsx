@@ -13,7 +13,7 @@ interface Server {
   location: string;
   dateAllocated: string;
   status: StatusType;
-  assignedTo: {
+  assignedTo: { //Fixed typo (assignedTo instead of assinedTo)
     serverAddress: string;
     serverType: string;
   };
@@ -22,7 +22,7 @@ interface Server {
 
 // Props interface for the component
 interface IpAddressesTableProps {
-  ipList: Server[];
+  ipList: Server[]; // Define expected prop
 }
 
 const columnsMin: GridColDef<Server>[] = [

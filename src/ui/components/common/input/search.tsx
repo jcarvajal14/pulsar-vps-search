@@ -28,22 +28,24 @@ const SearchTextDiv = styled.input`
     }
 `
 interface SearchComponentProps {
-  searchTerm: string;
-  onSearchChange: (value: string) => void;
+    searchTerm: string; // Current search value
+    onSearchChange: (value: string) => void; // Change handler
 }
 
 const SearchComponent: React.FC<SearchComponentProps> = ({ 
-  searchTerm, 
-  onSearchChange 
+    searchTerm, 
+    onSearchChange 
 }) => {
     return (
         <SearchDiv>
             <SearchIconDiv>
                 <SearchIcon />
             </SearchIconDiv>
+            {/* Controlled input component */}
             <SearchTextDiv 
                 placeholder='Search IP addresses'
-                value={searchTerm}
+                value={searchTerm} // Bind to prop value
+                 // Update state on change
                 onChange={(e) => onSearchChange(e.target.value)}
             />
         </SearchDiv>
