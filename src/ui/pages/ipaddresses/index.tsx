@@ -1,4 +1,4 @@
-import {useState, useMemo} from 'react';
+import {useState, useMemo} from 'react'; // Added for state management and memoization
 import { MainPageContainer } from '../../../styles/global';
 import {
   IPAllocateButton,
@@ -12,7 +12,7 @@ import ShoppingBagIcon from '../../components/common/svgicons/ShoppingBagIcon';
 import { Color } from '../../../constants/color';
 import { StatusType } from '../../../types/status.module';
 
-// Mock data for IP addresses
+// Mock data, complete dataset added for testing purposes
 
 const mockIpData = [
   {
@@ -91,16 +91,20 @@ const mockIpData = [
 
 export default function ServersPage() {
 
+  // State hook to manage the search input value
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Memoized filtering logic for performance optimization
   const filteredIpData = useMemo(() => {
+    // Return all data when search is empty
     if (!searchTerm) return mockIpData;
     
+    // Case-insensitive filtering
     const term = searchTerm.toLowerCase();
     return mockIpData.filter(item => 
       item.ipaddress.toLowerCase().includes(term)
     );
-  }, [searchTerm]);
+  }, [searchTerm]); // Only re-run when searchTerm changes
 
   return (
     <MainPageContainer>
@@ -112,14 +116,15 @@ export default function ServersPage() {
       <IPAddressesMainContent>
         <IPAddressesHeader>
           <SearchComponent 
-            searchTerm={searchTerm}
-            onSearchChange={setSearchTerm}
+            searchTerm={searchTerm} // Pass current search value
+            onSearchChange={setSearchTerm} // Pass state updater
           />
           <IPAllocateButton className='button-secondary'>
             <ShoppingBagIcon stroke={Color.$white} />
             <label>Allocate additional IPs</label>
           </IPAllocateButton>
         </IPAddressesHeader>
+        {/* Table with dynamically filtered data */}
         <IPAddressesTable ipList={filteredIpData} />
       </IPAddressesMainContent>
     </MainPageContainer>
